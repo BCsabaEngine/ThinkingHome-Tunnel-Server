@@ -1,13 +1,13 @@
-FROM node:10.1.0-alpine
+FROM node:current-alpine
 
-WORKDIR /app
+WORKDIR /tunnel
 
-COPY package.json /app/
-COPY yarn.lock /app/
+COPY package.json /tunnel/
+COPY yarn.lock /tunnel/
 
-RUN yarn install --production && yarn cache clean
+RUN npm install --prod
 
-COPY . /app
+COPY . /tunnel
 
 ENV NODE_ENV production
-ENTRYPOINT ["node", "-r", "esm", "./bin/server"]
+ENTRYPOINT ["node", "./index.js"]
