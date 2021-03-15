@@ -1,12 +1,12 @@
 {
-  "author": "Roman Shtylman <shtylman@gmail.com>",
-  "name": "localtunnel-server",
-  "description": "expose localhost to the world",
-  "version": "0.0.8",
+  "author": "Csaba Balazs <csaba@balazs-magyar.hu>",
+  "name": "ThinkingHome-Tunnel-Server",
+  "description": "tunnel server for ThinkingHome",
+  "version": "0.9.0",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/localtunnel/server.git"
+    "url": "git://github.com/BCsabaEngine/ThinkingHome-Tunnel-Server"
   },
   "dependencies": {
     "book": "1.3.3",
@@ -21,7 +21,7 @@
   "devDependencies": {
   },
   "scripts": {
-    "test": "mocha --check-leaks --require esm './**/*.test.js'",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./index.js"
   }
 }
