@@ -3,7 +3,7 @@ FROM node:current-alpine
 WORKDIR /tunnel
 
 COPY package.json /tunnel/
-COPY yarn.lock /tunnel/
+COPY package-lock.json /tunnel/
 
 RUN npm install --prod
 
