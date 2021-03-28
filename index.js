@@ -6,7 +6,7 @@ const server = CreateServer({
     domain: 'my.thinkinghome.hu',
 });
 
-server.listen(argv.port, argv.address, () => {
+server.listen(80, '0.0.0.0', () => {
     console.debug('server listening on port: %d', server.address().port);
 });
 
