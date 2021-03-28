@@ -1,12 +1,14 @@
 const CreateServer = require('./lib/Server.js')
 
+const config = require('./config.js');
+
 const server = CreateServer({
-    max_tcp_sockets: 100,
-    secure: false,
-    domain: 'my.thinkinghome.hu',
+    max_tcp_sockets: config.net.maxsocket,
+    secure: config.net.secure,
+    domain: config.net.domain,
 });
 
-server.listen(80, '0.0.0.0', () => {
+server.listen(config.net.port, config.net.host, () => {
     console.debug('server listening on port: %d', server.address().port);
 });
 
