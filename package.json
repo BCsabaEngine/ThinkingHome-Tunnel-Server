@@ -9,6 +9,7 @@
     "url": "git://github.com/BCsabaEngine/ThinkingHome-Tunnel-Server"
   },
   "dependencies": {
+    "got": "^11.8.2",
     "koa": "^2.13.1",
     "koa-router": "^10.0.0",
     "pump": "3.0.0",
